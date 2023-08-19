@@ -5,7 +5,6 @@ import { useApp } from "../hooks/useApp"
 function RoutesApp() {
   const { userData } = useApp()
 
-  console.log(userData)
   if (userData?.email) {
     return (
       <PrivateRoutes />
