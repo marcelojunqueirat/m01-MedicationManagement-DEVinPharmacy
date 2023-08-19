@@ -35,6 +35,7 @@ function LoginForm() {
 
     if (emailRegex.test(form.email) && passwordRegex.test(form.senha)) {
       setLoading(false)
+      localStorage.setItem("user", JSON.stringify(form))
       setUserData(form)
     }
   }
