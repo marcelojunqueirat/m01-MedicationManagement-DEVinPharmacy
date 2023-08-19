@@ -7,7 +7,7 @@ function PrivateRoutes() {
       <Routes>
         <Route path="/" element={<Navigate replace to="/map" />} />
         <Route path="/map" element={<PharmacyMap />} />
-        <Route path="/newpharmacy" element={<PharmacyNew />} />
+        <Route path="/pharmacy" element={<PharmacyNew />} />
       </Routes>
     )
   }

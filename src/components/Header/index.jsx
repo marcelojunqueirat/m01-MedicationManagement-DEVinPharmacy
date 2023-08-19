@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { pages } from "../../data/pages"
-import { Box, AppBar, Toolbar, IconButton, Typography } from "@mui/material"
 import "./style.css"
 
 function Header() {

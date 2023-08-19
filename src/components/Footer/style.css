@@ -1,0 +1,46 @@
+footer {
+  background-color: var(--main-bg-color);
+  opacity: 0.9;
+  height: 9vh;
+}
+
+ul {
+  padding-top: 15px;
+}
+
+#footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  font-size: smaller;
+}
+
+#footer a:hover {
+  transform: scale(1.05);
+  transition: transform .5s;
+}
+
+
+@media (max-width: 600px) {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    font-size: small;
+    padding: 0 15px;
+  }
+
+  #footer {
+    margin-top:5px;
+  }
+
+}

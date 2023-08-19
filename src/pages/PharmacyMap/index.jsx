@@ -1,6 +1,13 @@
+import { Header } from "../../components/Header"
+import { Footer } from "../../components/Footer"
+
 function PharmacyMap() {
   return (
-    <h1>MAPA</h1>
+    <>
+      <Header />
+      <h1>MAPA</h1>
+      <Footer />
+    </>
   )
 }
 
