@@ -1,14 +1,14 @@
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
 
-function PharmacyMap() {
+function PharmacyNew() {
   return (
     <>
       <Header />
-      <h1>MAPA</h1>
+      <h1 style={{ height: "85vh" }}>NOVA FARMACIA</h1>
       <Footer />
     </>
   )
 }
 
-export { PharmacyMap }
+export { PharmacyNew }
