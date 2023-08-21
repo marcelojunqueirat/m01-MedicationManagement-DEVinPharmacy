@@ -12,14 +12,14 @@
   align-items: center;
 }
 
-#titulo-sistema {
+#titulo-sistema-login {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--main-text-color);
 }
 
-#titulo-sistema img {
+#titulo-sistema-login img {
   margin-right: 10px;
   width: 40px;
 }

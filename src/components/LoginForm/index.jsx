@@ -65,7 +65,7 @@ function LoginForm() {
         <CardContent>
           <form onSubmit={handleSubmit}>
             <Grid item xs={12} sm={8} md={5}>
-              <div id="titulo-sistema">
+              <div id="titulo-sistema-login">
                 <img src="./logo.png" alt="Logo do sistema Medication Management - DEVinPharmacy" />
                 <h3>
                   Medication Management
