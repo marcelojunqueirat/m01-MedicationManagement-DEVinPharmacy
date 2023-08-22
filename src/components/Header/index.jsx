@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { pages } from "../../data/pages"
+import { pages } from "../../data"
 import "./style.css"
 
 function Header() {
@@ -23,10 +23,10 @@ function Header() {
       </div>
 
       <nav>
-        <ul>
+        <ul className="ul-list">
           {
             pages.map(({ route, description }) => (
-              <li key={route}>
+              <li className="li-item" key={route}>
                 <Link
                   to={route}
                   style={{ textDecoration: 'none', color: 'var(--secondary-text-color)' }}
