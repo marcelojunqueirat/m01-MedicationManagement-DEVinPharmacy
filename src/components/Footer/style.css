@@ -4,9 +4,8 @@ footer {
   height: 9vh;
 }
 
-ul {
-  padding-top: 0.5em;
-  margin-top: 1em;
+.ul-list {
+  padding-top: 1.5em;
 }
 
 #footer {
@@ -29,7 +28,7 @@ ul {
 
 
 @media (max-width: 600px) {
-  ul {
+  .ul-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +40,7 @@ ul {
   }
 
   #footer {
-    margin-top:5px;
+    margin-top: 5px;
   }
 
 }
