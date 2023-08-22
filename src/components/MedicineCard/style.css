@@ -1,0 +1,18 @@
+.medicine-card {
+  margin: 2em;
+  text-align: center;
+}
+
+#preco-card {
+  padding: 0.5em;
+  font-size: xx-large;
+}
+
+#preco-card span {
+  color: rgb(189, 187, 187);
+  font-size: large;
+}
+
+#medicamento-card {
+  font-size: x-large;
+}
