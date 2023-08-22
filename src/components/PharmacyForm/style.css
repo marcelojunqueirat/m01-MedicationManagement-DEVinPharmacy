@@ -1,0 +1,22 @@
+#form-farmacia {
+  background-color: var(--secondary-bg-color);
+  padding: 2em;
+}
+
+h2 {
+  padding: 1em;
+  text-align: center;
+}
+
+#body-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#border {
+  margin: 2em;
+  width: 90%;
+  border: 1px solid var(--secondary-bg-color);
+}
