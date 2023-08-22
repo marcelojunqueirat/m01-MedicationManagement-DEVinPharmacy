@@ -5,11 +5,12 @@ footer {
 }
 
 ul {
-  padding-top: 15px;
+  padding-top: 0.5em;
+  margin-top: 1em;
 }
 
 #footer {
-  margin-top: 15px;
+  padding-top: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;

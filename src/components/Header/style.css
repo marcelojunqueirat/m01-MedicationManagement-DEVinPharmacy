@@ -11,7 +11,12 @@ header {
 
 }
 
-#titulo-sistema {
+#titulo-sistema-header img {
+  margin-right: 10px;
+  width: 40px;
+}
+
+#titulo-sistema-header {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -19,12 +24,12 @@ header {
   color: var(--secondary-text-color);
 }
 
-#titulo-sistema h3:hover {
+#titulo-sistema-header h3:hover {
   transform: scale(1.05);
   transition: transform .5s;
 }
 
-#titulo-sistema img:hover {
+#titulo-sistema-header img:hover {
   transform: scale(1.02);
   transition: transform .5s;
   box-shadow: -2px 4px 30px 4px rgba(0, 151, 57, 1);
@@ -46,12 +51,12 @@ li:hover {
 }
 
 @media (max-width: 600px) {
-  #titulo-sistema {
+  #titulo-sistema-header {
     width: 50px;
     padding-left: 1em;
   }
 
-  #titulo-sistema h3 {
+  #titulo-sistema-header h3 {
     display: none;
   }
 
