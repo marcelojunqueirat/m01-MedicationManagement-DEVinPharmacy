@@ -1,4 +1,16 @@
-#form-list-medicine {
+#card-list-medicine {
   background-color: var(--secondary-bg-color);
   padding: 2em;
+}
+
+#medicines-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#titulo-list-medicamentos {
+  padding: 1em;
+  text-align: center;
 }

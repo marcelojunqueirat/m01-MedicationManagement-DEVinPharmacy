@@ -25,6 +25,7 @@ export function AppContextProvider({ children }) {
     try {
       const newMedicine = {
         id: listMedicines.length + 1,
+        img: "./remedio.png",
         ...form
       }
       const updatedListMedicines = [...listMedicines, newMedicine]
@@ -43,7 +44,8 @@ export function AppContextProvider({ children }) {
           userData,
           setUserData,
           AddPharmacy,
-          AddMedicine
+          AddMedicine,
+          listMedicines
         }
       }
     >

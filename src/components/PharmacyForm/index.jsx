@@ -293,7 +293,6 @@ function PharmacyForm() {
 
                   <Button
                     type="submit"
-                    fullWidth
                     variant="contained"
                     sx={{ mt: 3, mb: 2, width: '90%' }}
                   >Cadastrar</Button>
