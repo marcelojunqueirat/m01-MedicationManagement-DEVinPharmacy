@@ -46,12 +46,6 @@ function LoginForm() {
     }, time)
   }
 
-  if (loading) {
-    return (
-      <Loading />
-    )
-  }
-
   return (
     <section id="login">
       <Card
@@ -74,8 +68,11 @@ function LoginForm() {
 
               <div id="menu-login">
                 <h2>Login</h2>
-                {alertErrorEmail && <div className="errorMessage"><AlertMessage severity="error" alertMessage="E-mail inválido. E-mail deve ser no formato email@dominio.com" /></div>}
-                {alertErrorPassword && <div className="errorMessage"><AlertMessage severity="error" alertMessage="Senha inválida. Senha deve possuir 8 ou mais caracteres com números e letras." /></div>}
+
+                {loading && <Loading />}
+                {alertErrorEmail && <AlertMessage severity="error" alertMessage="E-mail inválido. E-mail deve ser no formato email@dominio.com" />}
+                {alertErrorPassword && <AlertMessage severity="error" alertMessage="Senha inválida. Senha deve possuir 8 ou mais caracteres com números e letras." />}
+                
                 <TextField
                   sx={{ width: '90%' }}
                   color="success"

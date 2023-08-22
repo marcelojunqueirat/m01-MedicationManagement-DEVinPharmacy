@@ -39,7 +39,3 @@
   transform: scale(1.05);
   transition: transform .5s;
 }
-
-.errorMessage {
-  margin: 1em;
-}
