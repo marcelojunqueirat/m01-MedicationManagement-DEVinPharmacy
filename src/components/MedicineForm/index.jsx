@@ -5,6 +5,7 @@ import { Loading } from "../../components/Loading"
 import { AlertMessage } from "../../components/Alert"
 import { useApp } from "../../hooks/useApp"
 import "./style.css"
+import { Link } from "react-router-dom"
 
 function MedicineForm() {
   const { AddMedicine } = useApp()
@@ -30,7 +31,7 @@ function MedicineForm() {
       }
       AddMedicine(form)
       setSuccessAlert(true)
-      // setForm({})
+      setForm({})
       alertTime(setSuccessAlert, 8000)
 
     } catch (error) {
@@ -112,7 +113,7 @@ function MedicineForm() {
                     id="preco"
                     name="preco"
                     type="number"
-                    value={form.preco || ''}
+                    value={Number(form.preco) || ''}
                     onChange={(event) => setForm({ ...form, preco: event.target.value })}
                   />
 
@@ -154,11 +155,18 @@ function MedicineForm() {
 
                   {loading && <Loading />}
                   {alertField && <AlertMessage severity="error" alertMessage="Preencha todos os campos obrigatórios." />}
-                  {successAlert && <AlertMessage severity="success" alertMessage="Medicamento cadastrado com sucesso" />}
-
+                  {successAlert
+                    &&
+                    <AlertMessage
+                      severity="success"
+                      alertMessage={
+                        <>
+                          <p>Medicamento cadastrado com sucesso.</p>
+                          <Link sx={{textDecoration: 'none'}} to='/medicine'>Voltar a Listagem de Medicamentos</Link>
+                        </>}
+                    />}
                   <Button
                     type="submit"
-                    fullWidth
                     variant="contained"
                     sx={{ mt: 3, mb: 2, width: '90%' }}
                   >Cadastrar</Button>
