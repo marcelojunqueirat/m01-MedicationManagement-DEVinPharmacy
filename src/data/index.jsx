@@ -13,4 +13,6 @@ const pages = [
   }
 ]
 
-export { pages }
+const medicineTypes = ["Medicamento Comum", "Medicamento Controlado"]
+
+export { pages, medicineTypes }

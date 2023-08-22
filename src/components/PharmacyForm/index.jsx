@@ -23,7 +23,7 @@ function PharmacyForm() {
     try {
       for (const field in form) {
         if (field != 'telefone' && field != 'complemento')
-          if (form[field].length == 0 || form[field] == '') {
+          if (form[field].length === 0 || form[field] === '') {
             setAlertField(true)
             alertTime(setAlertField, 5000)
             setLoading(false)
@@ -35,7 +35,7 @@ function PharmacyForm() {
       setForm({})
       alertTime(setSuccessAlert, 8000)
     } catch (error) {
-      console.log("Erro ao gravar formulário de Cadastro de Farmácia", error)
+      console.log("Erro ao cadastrar Farmácia.", error)
     }
 
     setLoading(false)
@@ -85,11 +85,13 @@ function PharmacyForm() {
             backgroundColor: '#FFF'
           }}
         >
-          <h2>Cadastro de Farmácia</h2>
+          <div id="titulo-form-farmacia">
+            <h2>Cadastro de Farmácia</h2>
+          </div>
           <CardContent>
             <form onSubmit={handleSubmit}>
               <Grid item xs={12} sm={8} md={5}>
-                <div id="body-form">
+                <div id="body-form-pharmacy">
                   <TextField
                     sx={{ width: '97%' }}
                     required
@@ -122,7 +124,7 @@ function PharmacyForm() {
                     margin="normal"
                     label="CNPJ"
                     name="cnpj"
-                    type="text"
+                    type="number"
                     id="cnpj"
                     inputProps={{ maxLength: 14 }}
                     value={form.cnpj || ''}
