@@ -30,7 +30,7 @@ function MedicineForm() {
       }
       AddMedicine(form)
       setSuccessAlert(true)
-      // setForm({})
+      setForm({})
       alertTime(setSuccessAlert, 8000)
 
     } catch (error) {
@@ -112,7 +112,7 @@ function MedicineForm() {
                     id="preco"
                     name="preco"
                     type="number"
-                    value={form.preco || ''}
+                    value={Number(form.preco) || ''}
                     onChange={(event) => setForm({ ...form, preco: event.target.value })}
                   />
 
