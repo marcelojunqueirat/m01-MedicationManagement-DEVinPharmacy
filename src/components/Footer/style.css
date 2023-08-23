@@ -1,11 +1,11 @@
 footer {
   background-color: var(--main-bg-color);
   opacity: 0.9;
-  height: 9vh;
+  height: 10vh;
 }
 
 .ul-list {
-  padding-top: 1.5em;
+  padding-top: 5px;
 }
 
 #footer {

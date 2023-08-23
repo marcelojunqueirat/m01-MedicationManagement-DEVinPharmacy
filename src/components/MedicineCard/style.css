@@ -16,3 +16,29 @@
 #medicamento-card {
   font-size: x-large;
 }
+
+/* MODAL */
+#modal-information {
+  font-size: large;
+}
+
+#medicamento-modal {
+  font-size: xx-large;
+  padding: 5px;
+}
+
+#preco-modal {
+  font-size: x-large;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.modal-data {
+  font-size: medium;
+  text-align: start;
+  padding: 5px;
+}
+
+.modal-data span {
+  font-weight: bold;
+}
