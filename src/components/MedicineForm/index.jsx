@@ -1,11 +1,11 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { Card, CardContent, Grid, TextField, InputLabel, Select, MenuItem, FormControl, Button } from "@mui/material"
 import { medicineTypes } from "../../data"
 import { Loading } from "../../components/Loading"
 import { AlertMessage } from "../../components/Alert"
 import { useApp } from "../../hooks/useApp"
 import "./style.css"
-import { Link } from "react-router-dom"
 
 function MedicineForm() {
   const { AddMedicine } = useApp()
@@ -162,8 +162,9 @@ function MedicineForm() {
                       alertMessage={
                         <>
                           <p>Medicamento cadastrado com sucesso.</p>
-                          <Link sx={{textDecoration: 'none'}} to='/medicine'>Voltar a Listagem de Medicamentos</Link>
-                        </>}
+                          <Link to='/medicine'>Voltar a Listagem de Medicamentos</Link>
+                        </>
+                      }
                     />}
                   <Button
                     type="submit"

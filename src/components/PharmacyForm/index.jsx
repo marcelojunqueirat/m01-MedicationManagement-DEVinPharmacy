@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { Card, CardContent, Grid, TextField, Button } from "@mui/material"
 import { Loading } from "../../components/Loading"
 import { AlertMessage } from "../../components/Alert"
@@ -289,7 +290,17 @@ function PharmacyForm() {
 
                   {loading && <Loading />}
                   {alertField && <AlertMessage severity="error" alertMessage="Preencha todos os campos obrigatórios." />}
-                  {successAlert && <AlertMessage severity="success" alertMessage="Farmácia cadastrada com sucesso" />}
+                  {successAlert &&
+                    <AlertMessage
+                      severity="success"
+                      alertMessage={
+                        <>
+                          <p>Farmácia cadastrada com sucesso</p>
+                          <Link to='/map'>Voltar a tela de Mapa.</Link>
+                        </>
+                      }
+                    />
+                  }
 
                   <Button
                     type="submit"
