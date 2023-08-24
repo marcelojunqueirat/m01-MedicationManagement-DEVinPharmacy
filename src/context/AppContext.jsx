@@ -45,7 +45,8 @@ export function AppContextProvider({ children }) {
           setUserData,
           AddPharmacy,
           AddMedicine,
-          listMedicines
+          listMedicines,
+          listPharmacies
         }
       }
     >
