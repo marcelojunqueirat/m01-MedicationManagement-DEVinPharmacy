@@ -1,9 +1,15 @@
 import { TileLayer } from "react-leaflet"
 import { MapContainer, Marker, Popup } from "react-leaflet"
 import { formatarCNPJ, formatarCelular } from "../../utils/formatar"
+import { Icon } from "leaflet"
 import "./style.css"
 
 function Map({ pharmacies }) {
+
+  const customIcon = new Icon({
+    iconUrl: "./pino.png",
+    iconSize: [38, 38]
+  })
 
   if (pharmacies.length > 0) {
     return (
@@ -13,6 +19,7 @@ function Map({ pharmacies }) {
 
           {pharmacies.map((localPharmarcy) => (
             <Marker
+              icon={customIcon}
               key={localPharmarcy.id}
               position={[localPharmarcy.latitude, localPharmarcy.longitude]}
             >
