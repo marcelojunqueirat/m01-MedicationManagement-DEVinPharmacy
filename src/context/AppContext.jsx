@@ -1,11 +1,13 @@
 import { createContext, useState } from "react"
+import { isMockTestsTrue } from "../utils/mockFunction";
+import { mockPharmacies, mockMedicines } from "../data";
 
 export const AppContext = createContext();
 
 export function AppContextProvider({ children }) {
   const [userData, setUserData] = useState(localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {})
-  const [listPharmacies, setListPharmacies] = useState(JSON.parse(localStorage.getItem("listPharmacies")) || [])
-  const [listMedicines, setListMedicines] = useState(JSON.parse(localStorage.getItem("listMedicines")) || [])
+  const [listPharmacies, setListPharmacies] = useState(JSON.parse(localStorage.getItem("listPharmacies")) || isMockTestsTrue(mockPharmacies, "listPharmacies") )
+  const [listMedicines, setListMedicines] = useState(JSON.parse(localStorage.getItem("listMedicines")) || isMockTestsTrue(mockMedicines, "listMedicines"))
 
   const AddPharmacy = (form) => {
     try {
