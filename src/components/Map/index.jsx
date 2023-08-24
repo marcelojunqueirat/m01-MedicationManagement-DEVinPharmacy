@@ -8,7 +8,7 @@ function Map({ pharmacies }) {
   if (pharmacies.length > 0) {
     return (
       <>
-        <MapContainer id="map-container" center={[pharmacies[0].latitude, pharmacies[0].longitude]} zoom={11} >
+        <MapContainer id="map-container" center={[pharmacies[0].latitude, pharmacies[0].longitude]} zoom={13} >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
           {pharmacies.map((localPharmarcy) => (

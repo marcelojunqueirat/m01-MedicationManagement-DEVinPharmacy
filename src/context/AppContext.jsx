@@ -30,7 +30,6 @@ export function AppContextProvider({ children }) {
       }
       const updatedListMedicines = [...listMedicines, newMedicine]
       setListMedicines(updatedListMedicines)
-      console.log(updatedListMedicines)
       localStorage.setItem("listMedicines", JSON.stringify(updatedListMedicines))
     } catch (error) {
       console.log("Erro ao cadastrar Medicamento", error)
