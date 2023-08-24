@@ -1,30 +1,59 @@
 import { TileLayer } from "react-leaflet"
 import { MapContainer, Marker, Popup } from "react-leaflet"
+import { formatarCNPJ, formatarCelular } from "../../utils/formatar"
 import "./style.css"
 
 function Map({ pharmacies }) {
 
-  return (
-    <>
-      <MapContainer id="map-container" center={[pharmacies[0].latitude, pharmacies[0].longitude]} zoom={12} >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+  if (pharmacies.length > 0) {
+    return (
+      <>
+        <MapContainer id="map-container" center={[pharmacies[0].latitude, pharmacies[0].longitude]} zoom={11} >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-        {pharmacies.map((localPharmarcy) => (
-          <Marker
-            key={localPharmarcy.id}
-            position={[localPharmarcy.latitude, localPharmarcy.longitude]}
-          >
-            <Popup>
-              <h3>{localPharmarcy.razaoSocial}</h3>
-              <p>{`E-mail: ${localPharmarcy.email}`}</p>
-              <p>{`Whatsapp: ${localPharmarcy.celular}`}</p>
-            </Popup>
-          </Marker>
-        ))}
+          {pharmacies.map((localPharmarcy) => (
+            <Marker
+              key={localPharmarcy.id}
+              position={[localPharmarcy.latitude, localPharmarcy.longitude]}
+            >
+              <Popup>
+                <div id="popup-info">
+                  <h3>{localPharmarcy.razaoSocial}</h3>
+                  <p>
+                    <b>CNPJ:</b> {formatarCNPJ(localPharmarcy.cnpj)}
+                  </p>
+                  <p>
+                    <b>E-mail:</b> {localPharmarcy.email}
+                  </p>
+                  <p>
+                    <b>Celular</b>: <a target="_blank" href={`https://wa.me/55${localPharmarcy.celular}`}>{formatarCelular(localPharmarcy.celular)}</a>
+                  </p>
+                  {localPharmarcy.telefone &&
+                    <p>
+                      <b>Telefone</b>: {formatarCelular(localPharmarcy.telefone)}
+                    </p>
+                  }
+                  <p>
+                    <b>Endereço</b>: {`${localPharmarcy.logradouro}${(localPharmarcy.complemento) ? ' - ' + localPharmarcy.complemento : ''}, ${localPharmarcy.numero} - ${localPharmarcy.bairro}, ${localPharmarcy.cidade} - ${localPharmarcy.estado}, ${localPharmarcy.cep} `}
+                  </p>
 
-      </MapContainer >
-    </>
-  )
+                </div>
+              </Popup>
+            </Marker>
+          ))}
+
+        </MapContainer >
+      </>
+    )
+  } else {
+    return (
+      <>
+        <MapContainer id="map-container" center={[-27.5944418, -48.52081496678028]} zoom={9} >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        </MapContainer >
+      </>
+    )
+  }
 }
 
 

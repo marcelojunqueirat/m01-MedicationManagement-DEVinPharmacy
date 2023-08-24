@@ -14,3 +14,8 @@
   padding: 1em;
   text-align: center;
 }
+
+#listagem-vazia {
+  padding: 1em 0;
+  text-align: center;
+}

@@ -2,3 +2,12 @@
   height: 80vh;
   width: 100%;
 }
+
+#popup-info h3 {
+  padding-bottom: 0.5em;
+}
+
+#popup-info p {
+  margin: 0;
+  padding: 0.2em 0;
+}
