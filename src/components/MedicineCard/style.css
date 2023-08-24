@@ -14,7 +14,7 @@
 }
 
 #medicamento-card {
-  font-size: x-large;
+  font-size: medium;
 }
 
 /* MODAL */
@@ -37,8 +37,13 @@
   font-size: medium;
   text-align: start;
   padding: 5px;
+  font-weight: bold;
+}
+
+.modal-data p {
+  text-align: justify;
 }
 
 .modal-data span {
-  font-weight: bold;
+  font-weight: normal;
 }

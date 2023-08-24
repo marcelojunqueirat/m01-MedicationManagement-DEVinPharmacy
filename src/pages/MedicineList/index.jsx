@@ -29,15 +29,21 @@ function MedicineList() {
               >Cadastrar Medicamento</Button>
             </Link>
             <div id="titulo-list-medicamentos">
-            <h2>Listagem de Medicamentos</h2>
-          </div>
-            <div id="medicines-list">
-              {
-                listMedicines.map((medicine) => (
-                  <MedicineCard key={medicine.id} medicine={medicine} />
-                ))
-              }
+              <h2>Listagem de Medicamentos</h2>
             </div>
+            {listMedicines.length > 0 ?
+              <div id="medicines-list">
+                {
+                  listMedicines.map((medicine) => (
+                    <MedicineCard key={medicine.id} medicine={medicine} />
+                  ))
+                }
+              </div>
+              :
+              <div id="listagem-vazia">
+                <h3>Não há medicamentos cadastrados.</h3>
+              </div>
+            }
           </CardContent>
         </Card>
       </section>

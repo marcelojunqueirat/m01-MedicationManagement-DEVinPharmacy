@@ -127,8 +127,7 @@ function PharmacyForm() {
                     name="cnpj"
                     type="number"
                     id="cnpj"
-                    inputProps={{ maxLength: 14 }}
-                    value={form.cnpj || ''}
+                    value={((form.cnpj > 14) ? form.cnpj = form.cnpj.slice(0, 14) : form.cnpj) || ''}
                     onChange={(event) => setForm({ ...form, cnpj: event.target.value })}
                   />
                   <TextField
