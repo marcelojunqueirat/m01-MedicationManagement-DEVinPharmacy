@@ -21,7 +21,7 @@ function Map({ pharmacies }) {
             <Marker
               icon={customIcon}
               key={localPharmarcy.id}
-              position={[localPharmarcy.latitude, localPharmarcy.longitude]}
+              position={[localPharmarcy.latitude.replace(',', '.'), localPharmarcy.longitude.replace(',', '.')]}
             >
               <Popup>
                 <div id="popup-info">
