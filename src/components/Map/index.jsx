@@ -11,7 +11,7 @@ function Map({ pharmacies }) {
     iconSize: [38, 38]
   })
 
-  if (pharmacies.length > 0) {
+  if (pharmacies?.length > 0) {
     return (
       <>
         <MapContainer id="map-container" center={[pharmacies[0].latitude, pharmacies[0].longitude]} zoom={13} >

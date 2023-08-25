@@ -31,7 +31,7 @@ function MedicineList() {
             <div id="titulo-list-medicamentos">
               <h2>Listagem de Medicamentos</h2>
             </div>
-            {listMedicines.length > 0 ?
+            {listMedicines?.length > 0 ?
               <div id="medicines-list">
                 {
                   listMedicines.map((medicine) => (

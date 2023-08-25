@@ -49,7 +49,7 @@ function PharmacyForm() {
   }
 
   const fetchDados = async (cep) => {
-    if (!cep || cep.length != 8) {
+    if (!cep || cep?.length != 8) {
       setCepError(true)
       setCepMessage("CEP precisa ter 8 digitos")
       return
