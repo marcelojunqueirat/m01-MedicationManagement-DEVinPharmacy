@@ -22,7 +22,7 @@ function MedicineForm() {
     try {
       for (const field in form) {
         if (field != 'descricaoMedicamento')
-          if (form[field].length === 0 || form[field] === '') {
+          if (form[field]?.length === 0 || form[field] === '') {
             setAlertField(true)
             alertTime(setAlertField, 5000)
             setLoading(false)
