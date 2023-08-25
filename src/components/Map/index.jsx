@@ -1,6 +1,6 @@
+import { formatarCNPJ, formatarCelular } from "../../utils/formatar"
 import { TileLayer } from "react-leaflet"
 import { MapContainer, Marker, Popup } from "react-leaflet"
-import { formatarCNPJ, formatarCelular } from "../../utils/formatar"
 import { Icon } from "leaflet"
 import "./style.css"
 
