@@ -271,7 +271,7 @@ function PharmacyForm() {
                     id="latitude"
                     name="latitude"
                     type="text"
-                    value={form.latitude || ''}
+                    value={(form.latitude) ? form.latitude.replace(',', '.') : ''}
                     onChange={(event) => setForm({ ...form, latitude: event.target.value })}
                   />
                   <TextField
@@ -283,7 +283,7 @@ function PharmacyForm() {
                     id="longitude"
                     name="longitude"
                     type="text"
-                    value={form.longitude || ''}
+                    value={(form.longitude) ? form.longitude.replace(',', '.') : ''}
                     onChange={(event) => setForm({ ...form, longitude: event.target.value })}
                   />
 
