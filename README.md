@@ -1,6 +1,6 @@
 # Medication Management - DEVinPharmacy LTDA
 
-### Medication Management é um sistema voltado para a gestão de farmácias e medicamentos. Permite o controle de cadastro de farmácias e suas localizações, possibilitando a visualização das farmácias em um mapa interativo. Também  possibilita ao usuário o cadastro de medicamentos, e a listagem dos mesmos.
+### Medication Management é um sistema voltado para a gestão de farmácias e medicamentos. Permite o controle de cadastro de farmácias e suas localizações, possibilitando a visualização das farmácias em um mapa interativo. Também possibilita ao usuário o cadastro de medicamentos, e a listagem dos mesmos.
 
 ## Tecnologias
 
@@ -8,12 +8,12 @@
 
 ## Rodando o projeto
 
-### Pré requisito para rodar o projeto é ter instalado o **<a href="https://nodejs.org/pt-br/download" target="_blank">node</a>**
+### Pré-requisito para rodar o projeto é ter instalado o **<a href="https://nodejs.org/pt-br/download" target="_blank">Node</a>**
 ### Após o clone do projeto, abra o terminal na raiz da pasta e digite:
 ```
 npm install
 ```
-> Irá instalar as dependecias do projeto
+> Irá instalar as dependências do projeto
 
 ```
 npm run dev
