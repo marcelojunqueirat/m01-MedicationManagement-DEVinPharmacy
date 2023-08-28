@@ -8,7 +8,7 @@
 
 ## Rodando o projeto
 
-### Pré requisito para rodar o projeto é ter instalado o **<a target="_blank" href="https://nodejs.org/pt-br/download">node</a>**
+### Pré requisito para rodar o projeto é ter instalado o **<a href="https://nodejs.org/pt-br/download" target="_blank">node</a>**
 ### Após o clone do projeto, abra o terminal na raiz da pasta e digite:
 ```
 npm install
@@ -28,7 +28,7 @@ npm run dev
 * Excluir Farmácias e Medicamentos
 
 ## Sugestões / Troca de ideias:
-### <a target="_blank" href="https://instagram.com/marcelo_junqueira_/">Me chame no IG</a>
+### <a href="https://instagram.com/marcelo_junqueira_/" target="_blank">Me chame no IG</a>
 
 
 > Desenvolvido por: Marcelo Teixeira
