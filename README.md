@@ -20,6 +20,11 @@ npm run dev
 ```
 > Irá iniciar o projeto por padrão na porta 5173 (localhost:5173)
 
+## Variáveis de ambiente
+### O sistema possui duas variáveis de ambiente, uma para a API de CEP e outra para um mock de testes com dados pré-prontos (para site não iniciar vazio)
+
+* VITE_REACT_APP_API_CEP: Recebe URL de API de CEP.
+* VITE_REACT_APP_MOCK_TEST: Recebe booleano, onde caso seja 'true', o site inicia com 3 farmácias pré cadastradas e 4 medicamentos. Caso 'false' site inicia vazio.
 
 ## Melhorias futuras:
 ### Desenvolver:
@@ -27,8 +32,15 @@ npm run dev
 * Editar Farmácias e Medicamentos
 * Excluir Farmácias e Medicamentos
 
-## Sugestões / Troca de ideias:
-### <a href="https://instagram.com/marcelo_junqueira_/" target="_blank">Me chame no IG</a>
+### Sugestões / Troca de ideias: <a href="https://instagram.com/marcelo_junqueira_/" target="_blank">Me chame no IG</a>
+<br>
+
+# Deploy da aplicação:
+## <a href="https://m01-medication-management-devinpharmacy.vercel.app/" target="_blank">Medication Management</a>
+  
 
 
 > Desenvolvido por: Marcelo Teixeira
+
+
+
